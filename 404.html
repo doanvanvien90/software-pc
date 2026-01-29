@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Home | DevBlzAlphaK1dXD</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:"Segoe UI",system-ui,sans-serif;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:#05060a;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+  overflow:hidden;
+  gap:18px;
+  padding-top:40px;
+}
+
+/* 🔥 BG */
+.bg{
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 30%, #00aaff55, transparent 45%),
+    radial-gradient(circle at 80% 70%, #0033ff55, transparent 45%),
+    radial-gradient(circle at center, #020416, #000);
+  filter:blur(50px);
+  z-index:-1;
+}
+
+/* 🔽 NAV */
+.nav{
+  width:420px;
+  display:flex;
+  gap:14px;
+}
+
+.nav a{
+  flex:1;
+  padding:14px;
+  text-align:center;
+  text-decoration:none;
+  color:#eaf6ff;
+  border-radius:14px;
+  background:rgba(10,15,30,.75);
+  backdrop-filter:blur(10px);
+  box-shadow:
+    0 0 20px #0077ff55,
+    inset 0 0 10px #00aaff33;
+  transition:.15s ease;
+}
+
+.nav a:hover{
+  transform:translateY(-2px) scale(1.05);
+  box-shadow:
+    0 0 32px #00aaffaa,
+    inset 0 0 16px #00ccff66;
+}
+
+/* 🃏 Card */
+.card{
+  width:420px;
+  padding:22px;
+  border-radius:20px;
+  background:rgba(10,15,30,.88);
+  backdrop-filter:blur(14px);
+  box-shadow:
+    0 0 45px #0088ff66,
+    0 0 100px #0022ff33;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+/* Header */
+.header{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.header img{
+  width:58px;
+  height:58px;
+  border-radius:16px; /* bo như cũ */
+  object-fit:cover;
+  box-shadow:0 0 22px #00aaffaa;
+}
+
+.header h2{
+  margin:0;
+  font-size:20px;
+  color:#eaf6ff;
+}
+
+.header p{
+  margin:0;
+  font-size:13px;
+  color:#7fbfff;
+}
+
+/* Buttons */
+.links{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  padding-top:10px;
+  border-top:1px solid #00aaff33;
+}
+
+.link-btn{
+  --x:50%;
+  --y:50%;
+  padding:15px;
+  text-align:center;
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  border-radius:16px;
+  background:
+    radial-gradient(
+      180px circle at var(--x) var(--y),
+      #00ccff,
+      #0044ff,
+      #020417
+    );
+  box-shadow:
+    0 0 22px #00aaff55,
+    inset 0 0 12px #00ccff44;
+  transition:.15s ease;
+}
+
+.link-btn:hover{
+  transform:translateY(-2px) scale(1.04);
+  box-shadow:
+    0 0 36px #00ccffaa,
+    inset 0 0 18px #00ccff66;
+}
+
+/* 🖱 Cursor glow */
+body::after{
+  content:"";
+  position:fixed;
+  width:120px;
+  height:120px;
+  pointer-events:none;
+  background:radial-gradient(circle,#00aaff55,transparent 70%);
+  filter:blur(22px);
+  transform:translate(-50%,-50%);
+  left:var(--cx,50%);
+  top:var(--cy,50%);
+}
+
+/* 📱 Mobile */
+@media(max-width:480px){
+  .card,.nav{width:92vw;}
+}
+</style>
+</head>
+
+<body>
+<div class="bg"></div>
+
+<div class="nav">
+  <a href="https://doanvanvien90.github.io/My-first-website/">Home</a>
+  <a href="https://doanvanvien90.github.io/FAQ">FAQ</a>
+</div>
+
+<div class="card">
+  <div class="header">
+    <!-- ✅ AVATAR LOCAL, KHÔNG BAY -->
+    <img src="https://lh3.googleusercontent.com/a-/ALV-UjW8PBINExrAuS3hyQxkQzsG3V15uRu6M1iTdn9VgaAZy5xmh6Zp3uGxEESZLvRTF8u5AsrlTNzVbLvGeH6hYTkMBwzmO4vAczynCk74pZkeNYHYMWUMgn1pZ0SMYJoYEqgYueGf_B30jrFmspE9RcIkU00j68MRqMVe5ZAx7ngKXQRqr1zSmC7X-NT6qL7TP1ECRQLUlaCW6o191Ezlh_jEZG7msq1ipxSeDsi8AWH4CLBn4rZWHIOmVuyjvmHBXxOu-18CjNeHso3eh_DlFGS9tufA_prcZmDKnLtTyAoIUP0GfEVV6NElvB7-eYIkI2s4f3bBWzLZSMdkBZ8ebF7wO0Yj5kIV2vXcfYOuMRpT3fYhzp_7n7a62-N8uIIBOEmYpNp5W78sk-w-9CTmnYelav0v820APkMQkxWclhluQa53mbsTDtMXAmW8gklr6nulw3e4YgLyc9760_WYW45BIVqRZjDgFTTT4aDs86A3pJt08LnZGUEeaeBT-gRfvIM1rj0lKxdCLwvQvC_M0vD3QMhPT2rDD7hr9wWIBiC3fCKCJoljTuTwx43IPkgHS-uxbaGus1o7abkFsJLOoTZdJWxWnALZqTfpiAsHSPHAD6AdkJST6rACnQDFJyQh95XY3ajL8CGVE9_wMgmoLHHqnUkKOyAkkg-dO5DXfqQBcVK3xrIkda0P8b5zpzJCPEQ6Btzboh2ChkAqQP1aQoAUL684Lb3O8qFK0bMGUjztryD__Bi3Ryi70mpqG-iXBvJWm3oOSsaWgtY4LIE5ZrSZnf92J2fX2h-LjiIVk6gsBVQ-5_5-KeXgjaP7naDomoKi6wiofmLlKdQ8qBWr4cncJrp2cYIxQxTDoPJvdR_uLsgo06Ipy7uiFiTzYOix_Id0noElWShUtHpiyvo215pNlE3aCCN8eHouRrX37dqiPbHiy0XA7xLMRykW8iKMltl-3lhXmSoCc5z5dM703IfC1Q1XnqjZQYcf0rCpESGstjPNM39k1dAoMU-fxfmEq5XSIQTx9_kPcxn7jCFgW8N6MybaldAQVyIQkcqgCeldyGnh0ol8faE=s432-c-no" alt="avatar">
+    <div>
+      <h2>DevBlzAlphaK1dXD</h2>
+      <p>Developer × Designer × Content creator</p>
+    </div>
+  </div>
+
+  <div class="links">
+    <a class="link-btn" href="https://drive.google.com/file/d/152LX4IcDQnYAmguSZH1OvbQh0QEqldwq/view?usp=drive_link" target="_blank">Steam</a>
+    <a class="link-btn" href="https://apps.microsoft.com/detail/xpffh613w8v6lv?hl=vi-VN&gl=VN" target="_blank">OBS Studio</a>
+    <a class="link-btn" href="https://apps.microsoft.com/detail/xpff8q4zp7q321?hl=vi-VN&gl=VN" target="_blank">Custom Cursor</a>
+    <a class="link-btn" href="https://drive.google.com/file/d/1cGzsPl7tq0q986XjHrIdUbML_d1VeIST/view?usp=drive_link" target="_blank">Undertale</a>
+    <a class="link-btn" href="https://www.roblox.com/download" target="_blank">Roblox</a>
+    <a class="link-btn" href="https://www.capcut.cn/" target="_blank">JianYing(capcut china)</a>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll(".link-btn").forEach(btn=>{
+  btn.addEventListener("mousemove",e=>{
+    const r = btn.getBoundingClientRect();
+    btn.style.setProperty("--x",`${e.clientX - r.left}px`);
+    btn.style.setProperty("--y",`${e.clientY - r.top}px`);
+  });
+  btn.addEventListener("mouseleave",()=>{
+    btn.style.setProperty("--x","50%");
+    btn.style.setProperty("--y","50%");
+  });
+});
+
+document.addEventListener("mousemove",e=>{
+  document.body.style.setProperty("--cx",e.clientX+"px");
+  document.body.style.setProperty("--cy",e.clientY+"px");
+});
+</script>
+</body>
+</html>
